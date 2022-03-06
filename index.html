@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS-Credit Calculator APP</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="col-10 offset-1 mt-3">
+            <div class="card">
+                <div class="card-header"><h5>Credit Calculator</h5></div>
+                <div class="card-body">
+                    <div class="row ">
+                        <div class="col-6">
+                            <label for="kredit-sum">Kredit summa</label>
+                            <input type="number" class="form-control" id="kredit-sum">
+
+                            <label for="year-percent" class="mt-3">Yillik foiz</label>
+                            <select id="year-percent" class="form-control">
+                                <option value="12">12%</option>
+                                <option value="15">15%</option>
+                                <option value="20">20%</option>
+                                <option value="25">25%</option>
+                            </select>
+
+                            <label for="year" class="mt-3">Kalendar yil</label>
+                            <select id="year" class="form-control">
+                                <option value="2021">2021 - Yil</option>
+                                <option value="2022">2022 - Yil</option>
+                                <option value="2023">2023 - Yil</option>
+                                <option value="2024">2024 - Yil</option>
+                                <option value="2025">2025 - Yil</option>
+                            </select>
+
+
+                        </div>
+                        <div class="col-6">
+                            <label for="start-percent">Boshlang'ich to'lov foizi</label>
+                            <select id="start-percent" class="form-control ">
+                                <option value="25">25%</option>
+                                <option value="30">30%</option>
+                                <option value="35">35%</option>
+                                <option value="40">40%</option>
+                            </select>
+
+                            <label for="year-period" class="mt-3">Yillik muddati</label>
+                            <select id="year-period" class="form-control">
+                                <option value="1">1 yil</option>
+                                <option value="2">2 yil</option>
+                                <option value="3">3 yil</option>
+                                <option value="5">5 yil</option>
+                                <option value="10">10 yil</option>
+                                <option value="20">20 yil</option>
+                            </select>
+
+                            <label for="month" class="mt-3">Kalendar oyi</label>
+                            <select id="month" class="form-control">
+                                <option value="0">Yanvar</option>
+                                <option value="1">Fevral</option>
+                                <option value="2">Mart</option>
+                                <option value="3">Aprel</option>
+                                <option value="4">May</option>
+                                <option value="5">Iyun</option>
+                                <option value="6">Iyul</option>
+                                <option value="7">Avgust</option>
+                                <option value="8">Sentabr</option>
+                                <option value="9">Oktabr</option>
+                                <option value="10">Noyabr</option>
+                                <option value="11">dekabr</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-success ml-auto d-block mt-3" onclick="calc()">Hisoblash
+                    </button>
+                </div>
+            </div>
+
+            <div class="card mt-3">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-4">
+                            <h6>Boshlang'ich to'lov summasi</h6>
+                            <p id="start-payment">0</p>
+                        </div>
+                        <div class="col-4">
+                            <h6>Berilgan kridit summasi</h6>
+                            <p id="givin-sum">0</p>
+                        </div>
+                        <div class="col-4">
+                            <h6>Oylik to'lovi</h6>
+                            <p id="month-payment">0</p>
+                        </div>
+                    </div>
+
+                    <table class="table table-striped table-hover">
+                        <thead>
+                        <tr>
+                            <th>№</th>
+                            <th>Yil</th>
+                            <th>Oy</th>
+                            <th>Asosiy qarz</th>
+                            <th>Oylik to'lovi</th>
+                            <th>Foiz to'lovi</th>
+                            <th>Jami to'lov</th>
+                        </tr>
+                        </thead>
+                        <tbody id="result"></tbody>
+                        <tfoot>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td id="oylik"></td>
+                            <td id="foiz"></td>
+                            <td id="foot"></td>
+                        </tr>
+                        </tfoot>
+
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="js/jquery-3.3.1.slim.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
